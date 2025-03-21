@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Gradients -->
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#2c4b7c;stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:#00a8e8;stop-opacity:0.1" />
+        </linearGradient>
+        <linearGradient id="techGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#2c4b7c" />
+            <stop offset="100%" style="stop-color:#4878cc" />
+        </linearGradient>
+        <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#f65058" />
+            <stop offset="100%" style="stop-color:#ff7b81" />
+        </linearGradient>
+        <linearGradient id="personGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4a4a4a" />
+            <stop offset="100%" style="stop-color:#2e2e2e" />
+        </linearGradient>
+        
+        <!-- Filters -->
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.15"/>
+        </filter>
+        
+        <!-- Animations -->
+        <animate xlink:href="#floatingCircle1" attributeName="cy" from="100" to="120" dur="6s" repeatCount="indefinite" />
+        <animate xlink:href="#floatingCircle2" attributeName="cy" from="400" to="420" dur="7s" repeatCount="indefinite" />
+        <animate xlink:href="#floatingCircle3" attributeName="cy" from="200" to="220" dur="8s" repeatCount="indefinite" />
+        <animate xlink:href="#dataPoint1" attributeName="r" from="4" to="6" dur="2s" repeatCount="indefinite" />
+        <animate xlink:href="#dataPoint2" attributeName="r" from="4" to="6" dur="2.5s" repeatCount="indefinite" />
+        <animate xlink:href="#dataPoint3" attributeName="r" from="4" to="6" dur="3s" repeatCount="indefinite" />
+    </defs>
+    
+    <!-- Background -->
+    <rect width="800" height="600" fill="url(#bgGrad)" />
+    
+    <!-- Floating Elements -->
+    <circle id="floatingCircle1" cx="700" cy="100" r="50" fill="#2c4b7c" opacity="0.05" />
+    <circle id="floatingCircle2" cx="100" cy="400" r="70" fill="#00a8e8" opacity="0.07" />
+    <circle id="floatingCircle3" cx="400" cy="200" r="40" fill="#f65058" opacity="0.05" />
+    
+    <!-- Connection Lines -->
+    <path d="M200,250 C300,150 500,400 700,300" stroke="#2c4b7c" stroke-width="1" fill="none" opacity="0.2" />
+    <path d="M150,350 C250,450 450,200 650,300" stroke="#00a8e8" stroke-width="1" fill="none" opacity="0.2" />
+    <path d="M300,150 C400,250 500,150 600,250" stroke="#f65058" stroke-width="1" fill="none" opacity="0.2" />
+    
+    <!-- Main Workspace Area -->
+    <g transform="translate(400, 300)">
+        <!-- Main Display Screen -->
+        <rect x="-250" y="-180" width="500" height="300" rx="10" fill="white" filter="url(#shadow)" />
+        
+        <!-- Screen Content - Data Visualization -->
+        <rect x="-230" y="-160" width="460" height="260" rx="5" fill="#f8f9fa" />
+        
+        <!-- Dashboard Elements -->
+        <rect x="-210" y="-140" width="200" height="100" rx="5" fill="white" stroke="#eaeaea" stroke-width="1" />
+        <rect x="10" y="-140" width="200" height="100" rx="5" fill="white" stroke="#eaeaea" stroke-width="1" />
+        <rect x="-210" y="-20" width="420" height="100" rx="5" fill="white" stroke="#eaeaea" stroke-width="1" />
+        
+        <!-- Chart in first box -->
+        <path d="M-190,-100 L-160,-80 L-130,-110 L-100,-70 L-70,-90 L-40,-60" stroke="url(#techGrad)" stroke-width="2" fill="none" />
+        <circle id="dataPoint1" cx="-190" cy="-100" r="4" fill="url(#techGrad)" />
+        <circle id="dataPoint2" cx="-130" cy="-110" r="4" fill="url(#techGrad)" />
+        <circle id="dataPoint3" cx="-70" cy="-90" r="4" fill="url(#techGrad)" />
+        
+        <!-- Pie chart in second box -->
+        <path d="M110,-90 L110,-90 A50,50 0 0,1 145,-55 L110,-90" fill="url(#techGrad)" />
+        <path d="M110,-90 L145,-55 A50,50 0 0,1 110,-40 L110,-90" fill="url(#accentGrad)" />
+        <path d="M110,-90 L110,-40 A50,50 0 0,1 75,-55 L110,-90" fill="#00a8e8" />
+        <path d="M110,-90 L75,-55 A50,50 0 0,1 110,-90 L110,-90" fill="#4878cc" opacity="0.7" />
+        
+        <!-- Bar chart in bottom box -->
+        <rect x="-190" y="10" width="30" height="50" rx="2" fill="url(#techGrad)" opacity="0.7" />
+        <rect x="-150" y="-10" width="30" height="70" rx="2" fill="url(#techGrad)" opacity="0.8" />
+        <rect x="-110" y="20" width="30" height="40" rx="2" fill="url(#techGrad)" opacity="0.9" />
+        <rect x="-70" y="-20" width="30" height="80" rx="2" fill="url(#accentGrad)" opacity="0.7" />
+        <rect x="-30" y="30" width="30" height="30" rx="2" fill="url(#accentGrad)" opacity="0.8" />
+        <rect x="10" y="0" width="30" height="60" rx="2" fill="url(#accentGrad)" opacity="0.9" />
+        <rect x="50" y="-15" width="30" height="75" rx="2" fill="#00a8e8" opacity="0.7" />
+        <rect x="90" y="25" width="30" height="35" rx="2" fill="#00a8e8" opacity="0.8" />
+        <rect x="130" y="-5" width="30" height="65" rx="2" fill="#00a8e8" opacity="0.9" />
+        <rect x="170" y="15" width="30" height="45" rx="2" fill="#4878cc" opacity="0.7" />
+    </g>
+    
+    <!-- Person Working -->
+    <g transform="translate(180, 350)">
+        <!-- Person Silhouette -->
+        <ellipse cx="0" cy="-70" rx="35" ry="40" fill="url(#personGrad)" />
+        <path d="M-20,-50 C-40,0 -30,50 -20,100 L20,100 C30,50 40,0 20,-50 Z" fill="url(#personGrad)" />
+        
+        <!-- Arms -->
+        <path d="M-20,-20 C-50,0 -70,50 -90,60" stroke="url(#personGrad)" stroke-width="10" stroke-linecap="round" />
+        <path d="M20,-20 C60,20 80,40 120,20" stroke="url(#personGrad)" stroke-width="10" stroke-linecap="round" />
+        
+        <!-- Laptop -->
+        <g transform="translate(140, 30) rotate(-10)">
+            <rect x="-50" y="0" width="100" height="10" rx="2" fill="#2c4b7c" />
+            <rect x="-50" y="-60" width="100" height="60" rx="5" fill="#2c4b7c" />
+            <rect x="-45" y="-55" width="90" height="50" rx="2" fill="#f8f9fa" />
+            
+            <!-- Laptop Screen Content -->
+            <rect x="-40" y="-50" width="80" height="10" rx="1" fill="#2c4b7c" opacity="0.2" />
+            <rect x="-40" y="-35" width="60" height="5" rx="1" fill="#2c4b7c" opacity="0.2" />
+            <rect x="-40" y="-25" width="70" height="5" rx="1" fill="#2c4b7c" opacity="0.2" />
+            <rect x="-40" y="-15" width="50" height="5" rx="1" fill="#2c4b7c" opacity="0.2" />
+        </g>
+    </g>
+    
+    <!-- Mobile Device -->
+    <g transform="translate(620, 380)">
+        <rect x="-30" y="-60" width="60" height="120" rx="10" fill="white" filter="url(#shadow)" />
+        <rect x="-25" y="-55" width="50" height="110" rx="5" fill="#f8f9fa" />
+        
+        <!-- Mobile Screen Content -->
+        <rect x="-20" y="-45" width="40" height="15" rx="2" fill="url(#techGrad)" opacity="0.2" />
+        <rect x="-20" y="-25" width="30" height="5" rx="1" fill="#2c4b7c" opacity="0.2" />
+        <rect x="-20" y="-15" width="25" height="5" rx="1" fill="#2c4b7c" opacity="0.2" />
+        <rect x="-20" y="-5" width="35" height="5" rx="1" fill="#2c4b7c" opacity="0.2" />
+        <rect x="-20" y="10" width="40" height="20" rx="2" fill="url(#accentGrad)" opacity="0.2" />
+        <rect x="-20" y="35" width="20" height="5" rx="1" fill="#2c4b7c" opacity="0.2" />
+        <rect x="-20" y="45" width="30" height="5" rx="1" fill="#2c4b7c" opacity="0.2" />
+        <circle cx="0" cy="35" r="3" fill="url(#accentGrad)" />
+    </g>
+    
+    <!-- Tablet Device -->
+    <g transform="translate(550, 180) rotate(15)">
+        <rect x="-60" y="-80" width="120" height="160" rx="10" fill="white" filter="url(#shadow)" />
+        <rect x="-55" y="-75" width="110" height="150" rx="5" fill="#f8f9fa" />
+        
+        <!-- Tablet Screen Content -->
+        <rect x="-45" y="-65" width="90" height="20" rx="2" fill="url(#techGrad)" opacity="0.2" />
+        <rect x="-45" y="-40" width="70" height="5" rx="1" fill="#2c4b7c" opacity="0.2" />
+        <rect x="-45" y="-30" width="60" height="5" rx="1" fill="#2c4b7c" opacity="0.2" />
+        <rect x="-45" y="-20" width="80" height="5" rx="1" fill="#2c4b7c" opacity="0.2" />
+        <rect x="-45" y="-5" width="40" height="40" rx="2" fill="url(#accentGrad)" opacity="0.2" />
+        <rect x="0" y="-5" width="40" height="40" rx="2" fill="#00a8e8" opacity="0.2" />
+        <rect x="-45" y="40" width="90" height="30" rx="2" fill="url(#techGrad)" opacity="0.1" />
+    </g>
+    
+    <!-- Floating Decorative Elements -->
+    <g transform="translate(700, 120)">
+        <circle cx="0" cy="0" r="20" fill="white" filter="url(#shadow)" />
+        <path d="M-8,-8 L8,8 M-8,8 L8,-8" stroke="url(#accentGrad)" stroke-width="3" stroke-linecap="round" />
+    </g>
+    
+    <g transform="translate(100, 200)">
+        <circle cx="0" cy="0" r="15" fill="white" filter="url(#shadow)" />
+        <path d="M-6,0 L6,0 M0,-6 L0,6" stroke="#00a8e8" stroke-width="3" stroke-linecap="round" />
+    </g>
+    
+    <!-- Code Brackets -->
+    <g transform="translate(150, 150) rotate(-15)">
+        <path d="M0,0 L-15,20 L0,40" fill="none" stroke="#2c4b7c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M30,0 L45,20 L30,40" fill="none" stroke="#2c4b7c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- Cloud Computing Element -->
+    <g transform="translate(650, 250)">
+        <circle cx="0" cy="0" r="25" fill="white" filter="url(#shadow)" />
+        <circle cx="-15" cy="5" r="15" fill="white" />
+        <circle cx="15" cy="5" r="15" fill="white" />
+        <circle cx="0" cy="-10" r="15" fill="white" />
+        <path d="M-10,15 L10,15" stroke="#00a8e8" stroke-width="2" />
+        <path d="M-5,10 L-5,20" stroke="#00a8e8" stroke-width="2" />
+        <path d="M5,10 L5,20" stroke="#00a8e8" stroke-width="2" />
+    </g>
+</svg> 

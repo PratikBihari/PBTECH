@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#00cec9;stop-opacity:0.2" />
+            <stop offset="100%" style="stop-color:#81ecec;stop-opacity:0.2" />
+        </linearGradient>
+    </defs>
+    <rect width="400" height="300" fill="url(#grad4)"/>
+    
+    <!-- Data Dashboard Elements -->
+    <rect x="50" y="70" width="300" height="180" rx="5" ry="5" fill="#fff" stroke="#00cec9" stroke-width="2"/>
+    
+    <!-- Header -->
+    <rect x="50" y="70" width="300" height="30" rx="5" ry="5" fill="#00cec9" stroke="none"/>
+    
+    <!-- Chart 1 - Bar Chart -->
+    <rect x="60" y="110" width="20" height="60" fill="#00cec9" stroke="none"/>
+    <rect x="90" y="110" width="20" height="80" fill="#00cec9" stroke="none"/>
+    <rect x="120" y="110" width="20" height="40" fill="#00cec9" stroke="none"/>
+    <rect x="150" y="110" width="20" height="100" fill="#00cec9" stroke="none"/>
+    
+    <!-- Chart 2 - Line Chart -->
+    <polyline points="200,180 230,150 260,170 290,130" 
+              fill="none" stroke="#00cec9" stroke-width="3"/>
+    
+    <!-- Bottom Menu -->
+    <rect x="60" y="220" width="280" height="20" rx="3" ry="3" fill="#e6e6e6" stroke="none"/>
+    
+    <text x="200" y="40" font-family="Arial" font-size="14" fill="#2c3e50" font-weight="bold" text-anchor="middle">Data Analytics Dashboard</text>
+</svg> 
