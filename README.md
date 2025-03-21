@@ -22,7 +22,7 @@ A modern, responsive website for PB TECH showcasing technology solutions, servic
 
 ## View Live
 
-This website is hosted on GitHub Pages at [https://pratikbihari.github.io/pb-tech/](https://pratikbihari.github.io/pb-tech/)
+This website is hosted on GitHub Pages at [https://pratikbihari.github.io/PBTECH/](https://pratikbihari.github.io/PBTECH/)
 
 ## Author
 
