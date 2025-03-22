@@ -1109,6 +1109,32 @@ header {
     font-size: 14px;
 }
 
+.footer-legal a {
+    color: var(--accent-color);
+    transition: var(--transition);
+    text-decoration: none;
+    position: relative;
+}
+
+.footer-legal a:hover {
+    color: white;
+}
+
+.footer-legal a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: var(--transition);
+}
+
+.footer-legal a:hover::after {
+    width: 100%;
+}
+
 .designer-credit {
     margin-top: 15px;
     padding-top: 15px;
